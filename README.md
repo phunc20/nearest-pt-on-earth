@@ -19,7 +19,7 @@ At first I did not read carefully, misunderstanding that the distance concerned 
 > Prove or disprove that on 2D, manhanttan distance **gives the same order** of distance pairs as Euclidean distance. That is, given points $A, B, C$, we have $d_{2}(A,C) > d_{2}(A,B) \iff d_{1}(A,C) > d_{1}(A,B)$, where $d_{1}, d_{2}$ denotes the Manhattan and Euclidean distances, respectively. A stronger statement to prove would be $\lVert\mathbf{x}\rVert_{2} > \lVert\mathbf{y}\rVert_{2} \iff \lVert\mathbf{x}\rVert_{1} > \lVert\mathbf{y}\rVert_{1}\quad\forall\; \mathbf{a}, \mathbf{b} \in \mathbb{R}^{2}.$ Moreover, if this is provable, extend the proof to $\mathbb{R}^{n}$ and **arbitrary _equivalent_ pair of norms**.
 
 **Proof.**<br>
-We shall use (without proving) a basic and famous theorem about **finite-dimensional normed vector space**. That is, in such a space, all norms are **_equivalent_**. (Recall that two norms $\lVert\cdot\rVert_{1}, \lVert\cdot\rVert_{2}$ on a vector space $V$ are said to be **_equivalent_** if $\exists\, a, b > 0\;$ s.t. $\;a\lVert\mathbf{x}\rVert_{1} < \lVert\mathbf{x}\rVert_{2} < b\lVert\mathbf{x}\rVert_{1}\quad \forall\; \mathbf{x} \in V.\,$)
+We shall use (without proving) a basic and famous theorem about **finite-dimensional normed vector space**. That is, in such a space, all norms are **_equivalent_**. (Recall that two norms $`\lVert\cdot\rVert_{1}, \lVert\cdot\rVert_{2}`$ on a vector space $`V`$ are said to be **_equivalent_** if $`\exists\, a, b > 0\;`$ s.t. $`\;a\lVert\mathbf{x}\rVert_{1} < \lVert\mathbf{x}\rVert_{2} < b\lVert\mathbf{x}\rVert_{1}\quad \forall\; \mathbf{x} \in V.\,`$)
 
 
 
