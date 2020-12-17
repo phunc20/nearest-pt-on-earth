@@ -32,4 +32,4 @@ Now, Starting from $`\lVert x\rVert_{1}`$, we would like to reach the conclusion
 ```
 
 
-**Rmk.** The reason why I want to prove this is that had **Clark Chen** asked the same question in $`\mathbb{R}^{2}`$ (instead of in $`S^{2}`$), calculating Manhattan distance is clearly faster and easier than calculating Euclidean distance.
+**Rmk.** The reason why I want to prove this is that, had **Clark Chen** asked the same question in $`\mathbb{R}^{2}`$ (instead of in $`S^{2}`$), calculating Manhattan distance is **clearly faster and easier** than calculating Euclidean distance.
