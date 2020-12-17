@@ -1,4 +1,4 @@
-## Origin
+# Origin
 There is this user **Clark Chen** who posted an interesting question on Python Taiwan, a Facebook group:
 
 抱歉想請教更有效率的寫法。
@@ -7,10 +7,10 @@ There is this user **Clark Chen** who posted an interesting question on Python T
 想請問有經驗的大大們不知道有沒有更有效率的做法？或是給我幾個關鍵字讓我自己去搜尋也可以。
 先行謝過，感激不盡～
 
-
+## Proposed Solutions
 Other people have suggested:
 01. [`rtree`](https://gis.stackexchange.com/questions/22082/how-can-i-use-r-tree-to-find-points-within-a-distance-in-spatialite)
-02. kdtree (e.g. from `scipy.spatial`)
+02. kdtree (e.g. from [`scipy.spatial`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.KDTree.html))
 03. [geoSearch (mongoDB)](https://docs.mongodb.com/manual/reference/command/geoSearch/)
 04. [quad tree](http://homepage.divms.uiowa.edu/~kvaradar/sp2012/daa/ann.pdf)
 
