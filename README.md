@@ -16,10 +16,20 @@ Other people have suggested:
 
 ## Misunderstanding
 At first I did not read carefully, misunderstanding that the distance concerned was Euclidean distance (instead of geodesic on an ellipsoid/sphere). But this misunderstood question has its own merit:
-> Prove or disprove that on 2D, manhanttan distance **gives the same order** of distance pairs as Euclidean distance. That is, given points $`A, B, C`$, we have $`d_{2}(A,C) > d_{2}(A,B) \iff d_{1}(A,C) > d_{1}(A,B)`$, where $`d_{1}, d_{2}`$ denotes the Manhattan and Euclidean distances, respectively. A stronger statement to prove would be $`\lVert\mathbf{x}\rVert_{2} > \lVert\mathbf{y}\rVert_{2} \iff \lVert\mathbf{x}\rVert_{1} > \lVert\mathbf{y}\rVert_{1}\quad\forall\; \mathbf{a}, \mathbf{b} \in \mathbb{R}^{2}.`$ Moreover, if this is provable, extend the proof to $`\mathbb{R}^{n}`$ and **arbitrary _equivalent_ pair of norms**.
+> Prove or disprove that on 2D, manhanttan distance **gives the same order** of distance pairs as Euclidean distance. That is, given points $`A, B, C`$, we have $`d_{2}(A,C) > d_{2}(A,B) \iff d_{1}(A,C) > d_{1}(A,B)`$, where $`d_{1}, d_{2}`$ denotes the Manhattan and Euclidean distances, respectively. A stronger statement to prove would be $`\lVert\mathbf{x}\rVert_{2} > \lVert\mathbf{y}\rVert_{2} \iff \lVert\mathbf{x}\rVert_{1} > \lVert\mathbf{y}\rVert_{1}\quad\forall\; \mathbf{x}, \mathbf{y} \in \mathbb{R}^{2}.`$ Moreover, if this is provable, extend the proof to $`\mathbb{R}^{n}`$ and **arbitrary _equivalent_ pair of norms**.
 
 **Proof.**<br>
 We shall use (without proving) a basic and famous theorem about **finite-dimensional normed vector space**. That is, in such a space, all norms are **_equivalent_**. (Recall that two norms $`\lVert\cdot\rVert_{1}, \lVert\cdot\rVert_{2}`$ on a vector space $`V`$ are said to be **_equivalent_** if $`\exists\, a, b > 0\;`$ s.t. $`\;a\lVert\mathbf{x}\rVert_{1} < \lVert\mathbf{x}\rVert_{2} < b\lVert\mathbf{x}\rVert_{1}\quad \forall\; \mathbf{x} \in V.\,`$)
 
+We show that if $`\lVert\cdot\rVert_{1}, \lVert\cdot\rVert_{2}`$ are two equivalent norms on a finite-dimensional vector space $`V`$, then we have 
+$`\lVert\mathbf{x}\rVert_{2} > \lVert\mathbf{y}\rVert_{2} \implies \lVert\mathbf{x}\rVert_{1} > \lVert\mathbf{y}\rVert_{1}\quad\forall\; \mathbf{x}, \mathbf{y} \in V.`$ **The remaining direction/implication is automatic.**
+
+Let $`x, y \in V.`$<br>
+Since $`\lVert\cdot\rVert_{1}, \lVert\cdot\rVert_{2}`$ are equivalent, there exist $`a, b > 0`$ s.t. $`\;a\lVert\mathbf{v}\rVert_{1} < \lVert\mathbf{v}\rVert_{2} < b\lVert\mathbf{v}\rVert_{1}\quad \forall\; \mathbf{v} \in V.\,`$<br>
+Now, Starting from $`\lVert x\rVert_{1}`$, we would like to reach the conclusion $`\lVert x\rVert_{1} > \lVert y\rVert_{1}.`$<br>
+```math
+\lVert x\rVert_{1} > \frac{1}{b} \lVert x\rVert_{2} > \frac{1}{a} \lVert x\rVert_{2} > \frac{1}{a} \lVert y\rVert_{2} > \lVert y\rVert_{1}.
+```
 
 
+**Rmk.** The reason why I want to prove this is that had **Clark Chen** asked the same question in $`\mathbb{R}^{2}`$ (instead of in $`S^{2}`$), calculating Manhattan distance is clearly faster and easier than calculating Euclidean distance.
