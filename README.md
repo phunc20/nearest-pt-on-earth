@@ -1,4 +1,5 @@
-There is this user **Clark Chen** who posted an interesting question on Python Taiwan:
+## Origin
+There is this user **Clark Chen** who posted an interesting question on Python Taiwan, a Facebook group:
 
 抱歉想請教更有效率的寫法。
 假設我有10000個地點（10000個經緯度座標），我想要找出「每一個地點離他最近的地點」，並取出這個最短距離。
@@ -7,15 +8,14 @@ There is this user **Clark Chen** who posted an interesting question on Python T
 先行謝過，感激不盡～
 
 
-Other people have suggested him:
+Other people have suggested:
 01. [`rtree`](https://gis.stackexchange.com/questions/22082/how-can-i-use-r-tree-to-find-points-within-a-distance-in-spatialite)
 02. kdtree (e.g. from `scipy.spatial`)
 03. [geoSearch (mongoDB)](https://docs.mongodb.com/manual/reference/command/geoSearch/)
 04. [quad tree](http://homepage.divms.uiowa.edu/~kvaradar/sp2012/daa/ann.pdf)
 
 ## Misunderstanding
-At first I did read carefully, misunderstanding that the distance concerned was Euclidean distance (instead of geodesic on an ellipsoid). But this misunderstood question has its own merit:
-
-> Prove that on 2D, manhanttan distance gives the same order as Euclidean distance.
+At first I did not read carefully, misunderstanding that the distance concerned was Euclidean distance (instead of geodesic on an ellipsoid/sphere). But this misunderstood question has its own merit:
+> Prove or disprove that on 2D, manhanttan distance **gives the same order** of distance pairs as Euclidean distance. That is, given points $A, B, C$, we have $d_{2}(A,C) > d_{2}(A,B) \iff d_{1}(A,C) > d_{1}(A,B)$, where $d_{1}, d_{2}$ denotes the Manhattan and Euclidean distances, respectively. A stronger statement to prove would be $\lVert\mathbf{a}\rVert_{2} > \lVert\mathbf{b}\rVert_{2} \iff \lVert\mathbf{a}\rVert_{1} > \lVert\mathbf{b}\rVert_{1}\quad\forall\; \mathbf{a}, \mathbf{b} \in \mathbb{R}^{2}.$ Moreover, if this is provable, extend the proof to $\mathbb{R}^{n}$ and **arbitrary _equivalent_ pair of norms**.
 
 
