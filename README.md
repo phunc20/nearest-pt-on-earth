@@ -27,9 +27,7 @@ $`\lVert\mathbf{x}\rVert_{2} > \lVert\mathbf{y}\rVert_{2} \implies \lVert\mathbf
 Let $`x, y \in V.`$<br>
 Since $`\lVert\cdot\rVert_{1}, \lVert\cdot\rVert_{2}`$ are equivalent, there exist $`a, b > 0`$ s.t. $`\;a\lVert\mathbf{v}\rVert_{1} < \lVert\mathbf{v}\rVert_{2} < b\lVert\mathbf{v}\rVert_{1}\quad \forall\; \mathbf{v} \in V.\,`$<br>
 Now, Starting from $`\lVert x\rVert_{1}`$, we would like to reach the conclusion $`\lVert x\rVert_{1} > \lVert y\rVert_{1}.`$<br>
-```math
-\lVert x\rVert_{1} > \frac{1}{b} \lVert x\rVert_{2} > \frac{1}{a} \lVert x\rVert_{2} > \frac{1}{a} \lVert y\rVert_{2} > \lVert y\rVert_{1}.
-```
+$`\lVert x\rVert_{1} > \frac{1}{b} \lVert x\rVert_{2} > \frac{1}{a} \lVert x\rVert_{2} > \frac{1}{a} \lVert y\rVert_{2} > \lVert y\rVert_{1}.`$
 
 
 **Rmk.** The reason why I want to prove this is that, had **Clark Chen** asked the same question in $`\mathbb{R}^{2}`$ (instead of in $`S^{2}`$), calculating Manhattan distance is **clearly faster and easier** than calculating Euclidean distance.
