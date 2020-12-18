@@ -29,6 +29,7 @@ Since $`\lVert\cdot\rVert_{1}, \lVert\cdot\rVert_{2}`$ are equivalent, there exi
 Now, Starting from $`\lVert v\rVert_{1}`$, we would like to reach the conclusion $`\lVert v\rVert_{1} > \lVert w\rVert_{1}.`$<br>
 This is quite straightforward: $`\lVert v\rVert_{1} > \frac{1}{b} \lVert v\rVert_{2} > \frac{1}{a} \lVert v\rVert_{2} > \frac{1}{a} \lVert w\rVert_{2} > \lVert w\rVert_{1}.`$
 <div align="right"><b>QED</b></div>
-
 <br>
-**Rmk.** The reason why I want to prove this is that, had **Clark Chen** asked the same question in $`\mathbb{R}^{2}`$ (instead of in $`S^{2}`$), calculating Manhattan distance is **clearly faster and easier** than calculating Euclidean distance.
+
+**Rmk.** The reason why I want to prove this is that, had **Clark Chen** asked the same question in $`\mathbb{R}^{2}`$ (instead of in $`S^{2}`$), calculating Manhattan distance is **clearly faster and easier** than calculating Euclidean distance. <br>
+For example, facing with `10_000` points $`x_{0}, \ldots, x_{9999}`$ in $`\mathbb{R}^{2}`$, the order of the distances $d(x_{0}, x_{1}), d(x_{0}, x_{2}), d(x_{0}, x_{3}), \ldots, d(x_{0}, x_{9999})$ is **fixed** no matter which distance $`d`$ we choose to use.
