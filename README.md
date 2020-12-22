@@ -7,6 +7,12 @@ There is this user **Clark Chen** who posted an interesting question on Python T
 想請問有經驗的大大們不知道有沒有更有效率的做法？或是給我幾個關鍵字讓我自己去搜尋也可以。
 先行謝過，感激不盡～
 
+Unfaithful translation into English:<br>
+Having `10_000` coordinates (i.e. longitude-latitude pairs) on Earth,
+for each coordinate the user is looking for **another coordinate which is closest to it** and the **distance btw them**.
+He used `geopy` to facilitate the calculation of the distance and was looking for something that could be more
+efficient than a simple, naive double for loop thru the pairs of points on Earth.
+
 ## Proposed Solutions
 Other people have suggested:
 01. [`rtree`](https://gis.stackexchange.com/questions/22082/how-can-i-use-r-tree-to-find-points-within-a-distance-in-spatialite)
@@ -32,4 +38,5 @@ This is quite straightforward: $`\lVert v\rVert_{1} > \frac{1}{b} \lVert v\rVert
 <br>
 
 **Rmk.** The reason why I want to prove this is that, had **Clark Chen** asked the same question in $`\mathbb{R}^{2}`$ (instead of in $`S^{2}`$), calculating Manhattan distance is **clearly faster and easier** than calculating Euclidean distance. <br>
-For example, facing with `10_000` points $`x_{0}, \ldots, x_{9999}`$ in $`\mathbb{R}^{2}`$, the order of the distances $`d(x_{0}, x_{1}), d(x_{0}, x_{2}), d(x_{0}, x_{3}), \ldots, d(x_{0}, x_{9999})`$ is **fixed** no matter which distance $`d`$ we choose to use.
+For example, facing with `10_000` points $`x_{0}, \ldots, x_{9999}`$ in $`\mathbb{R}^{2}`$, the order of the distances $`d(x_{0}, x_{1}), d(x_{0}, x_{2}), d(x_{0}, x_{3}), \ldots, d(x_{0}, x_{9999})`$ is **fixed** no matter which distance $`d`$ we choose to use.<br>
+I have written a small python script to verify this, cf. `misunderstanding/experiment.py`
