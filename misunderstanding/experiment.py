@@ -28,10 +28,10 @@ def dist_matrix(points, norm):
 def near_far_matrix(points, norm):
     m1 = dist_matrix(points, norm)
     print(norm)
-    print(f"m1 = {m1}")
+    print(f"m1 =\n{m1}")
     #m2 = np.argmin(m1, axis=1)
     m2 = np.argsort(m1, axis=1)
-    print(f"m2 = {m2}")
+    print(f"m2 =\n{m2}")
     return m2
 
 if __name__ == "__main__":
@@ -40,16 +40,29 @@ if __name__ == "__main__":
     #ys = rs.randint(low=-n_points, high=n_points, size=(n_points,1), dtype=int)
     #points = np.hstack([xs, ys])
     #print(f"points = {points}")
-    points = np.random.rand(n_points, 2)
-    np.set_printoptions(precision=3)
+    points = np.random.rand(n_points, 2) * 100
+    np.set_printoptions(precision=2)
     #print(f"points =\n{points}")
     
     #p_norms = list(range(1, 3+1))
     
     
-    ps = range(1, 4)
-    norms = { i: (lambda x: np.linalg.norm(x, ord=i)) for i in ps }
-    
+    ##ps = range(1, 4)
+    #ps = list(range(1, 4))
+    ##norms = { p: (lambda x: np.linalg.norm(x, ord=p)) for p in ps }
+    #norms = { p: lambda x: np.linalg.norm(x, ord=p) for p in ps }
+
+    ps = [1,2,3]
+    norms = { 1: lambda x: np.linalg.norm(x, ord=1),
+              2: lambda x: np.linalg.norm(x, ord=2),
+              3: lambda x: np.linalg.norm(x, ord=3),
+            }
+
+    # Debug
+    a = np.array([3,4])
+    b = np.array([-3,7])
+    for p in ps:
+        print(f"norms[{p}](a-b) = {norms[p](a-b)}")
     
     near_far_matrices = { p: near_far_matrix(points, norms[p]) for p in ps }
     
