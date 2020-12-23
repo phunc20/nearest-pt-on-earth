@@ -44,3 +44,6 @@ The preceding inequality is **false**: We don't have $`\frac{1}{b} \lVert v\rVer
 Looking from the other side, one might find it easy to find some counterexamples to disprove this:<br>
 For example, $`u = \begin{pmatrix} 3 \\ 4\end{pmatrix}, v = \begin{pmatrix} 1 \\ 5\end{pmatrix} \implies \lVert u\rVert_{1} = 7 > 6 = \lVert v\rVert_{1} \quad\text{but}\quad \lVert u\rVert_{2} = 5 < \sqrt{26} = \lVert v\rVert_{2}.`$<br>
 In general, **the order in one norm does not guarantee any particular order in another**.
+
+We could gain some intuition if we draw the "_circles_" in Manhattan distance and Euclidean distance in $\mathbb{R}^{2}$:
+![circlesSideBySide](fig/circles_l1l2.png)
