@@ -66,3 +66,7 @@ we see that
   - `u`'s Euclidean norm is less than that of the point `(0, 1)`
   - `u`'s Manhattan norm is equal to that of the point `(0, 1)`
 
+_Similarly_, from the figure below, we see that smaller Manhattan norm does not always imply smaller Euclidean norm.
+<br>
+<br>
+![insideManhattan](fig/inside_Manhattan.png)
