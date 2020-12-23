@@ -33,12 +33,14 @@ $`\lVert v\rVert_{2} \ge \lVert w\rVert_{2} \implies \lVert v\rVert_{1} > \lVert
 Let $`v, w \in V.`$<br>
 Since $`\lVert\cdot\rVert_{1}, \lVert\cdot\rVert_{2}`$ are equivalent, there exist $`a, b > 0`$ s.t. $`\;a\lVert u\rVert_{1} \le \lVert u\rVert_{2} \le b\lVert u\rVert_{1}\quad \forall\; u \in V.\,`$<br>
 Now, Starting from $`\lVert v\rVert_{1}`$, we would like to reach the conclusion $`\lVert v\rVert_{1} \ge \lVert w\rVert_{1}.`$<br>
-This is quite ~~straightforward~~: $`\lVert v\rVert_{1} \ge \frac{1}{b} \lVert v\rVert_{2} \ge \frac{1}{a} \lVert v\rVert_{2} \ge \frac{1}{a} \lVert w\rVert_{2} \ge \lVert w\rVert_{1}.`$<br>
-The preceding inequality is **false**: We don't have $`\frac{1}{b} \lVert v\rVert_{2} \ge \frac{1}{a} \lVert v\rVert_{2} `$, because $`\frac{1}{b} \le \frac{1}{a}`.$<br>
-Looking around the other side, one might find it easy to find some counterexamples to disprove this:<br>
-For example, $`u = \begin{pmatrix} 3 \\ 4\end{pmatrix}, v = \begin{pmatrix} 1 \\ 5\end{pmatrix} \implies \lVert u\rVert_{1} = 7 > 6 = \lVert v\rVert_{1} \;\text{but}\; \lVert u\rVert_{2} = 5 < \sqrt{26} = \lVert v\rVert_{2}.`$<br>
-In general, **the order in one norm does not guarantee any particular order in another**.
+This is quite ~~straightforward~~: ~~$`\lVert v\rVert_{1} \ge \frac{1}{b} \lVert v\rVert_{2} \ge \frac{1}{a} \lVert v\rVert_{2} \ge \frac{1}{a} \lVert w\rVert_{2} \ge \lVert w\rVert_{1}.`$~~<br>
 
-**Rmk.** The reason why I want to prove this is that, had **Clark Chen** asked the same question in $`\mathbb{R}^{2}`$ (instead of in $`S^{2}`$), calculating Manhattan distance is **clearly faster and easier** than calculating Euclidean distance. <br>
-For example, facing with `10_000` points $`x_{0}, \ldots, x_{9999}`$ in $`\mathbb{R}^{2}`$, the order of the distances $`d(x_{0}, x_{1}), d(x_{0}, x_{2}), d(x_{0}, x_{3}), \ldots, d(x_{0}, x_{9999})`$ is **fixed** no matter which distance $`d`$ we choose to use.<br>
-I have written a small python script to verify this, cf. `misunderstanding/experiment.py`
+~~**Rmk.** The reason why I want to prove this is that, had **Clark Chen** asked the same question in $`\mathbb{R}^{2}`$ (instead of in $`S^{2}`$), calculating Manhattan distance is **clearly faster and easier** than calculating Euclidean distance.~~ <br>
+~~For example, facing with `10_000` points $`x_{0}, \ldots, x_{9999}`$ in $`\mathbb{R}^{2}`$, the order of the distances $`d(x_{0}, x_{1}), d(x_{0}, x_{2}), d(x_{0}, x_{3}), \ldots, d(x_{0}, x_{9999})`$ is **fixed** no matter which distance $`d`$ we choose to use.~~<br>
+~~I have written a small python script to verify this, cf. `misunderstanding/experiment.py`~~
+<br>
+
+The preceding inequality is **false**: We don't have $`\frac{1}{b} \lVert v\rVert_{2} \ge \frac{1}{a} \lVert v\rVert_{2} `$, because $`\frac{1}{b} \le \frac{1}{a}.`$<br>
+Looking from the other side, one might find it easy to find some counterexamples to disprove this:<br>
+For example, $`u = \begin{pmatrix} 3 \\ 4\end{pmatrix}, v = \begin{pmatrix} 1 \\ 5\end{pmatrix} \implies \lVert u\rVert_{1} = 7 > 6 = \lVert v\rVert_{1} \quad\text{but}\quad \lVert u\rVert_{2} = 5 < \sqrt{26} = \lVert v\rVert_{2}.`$<br>
+In general, **the order in one norm does not guarantee any particular order in another**.
