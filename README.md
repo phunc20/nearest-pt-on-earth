@@ -25,17 +25,19 @@ At first I misunderstood that the distance concerned was Euclidean distance (ins
 > Prove or disprove that on 2D, manhanttan distance **gives the same order** of distance pairs as Euclidean distance does. That is, given $`x, y, z \in \mathbb{R}^{2}`$, we have $`d_{2}(x,z) > d_{2}(x,y) \iff d_{1}(x,z) > d_{1}(x,y)`$, where $`d_{1}, d_{2}`$ denotes the Manhattan and Euclidean distances, respectively. A stronger statement to prove would be $`\lVert v\rVert_{2} > \lVert w\rVert_{2} \iff \lVert v\rVert_{1} > \lVert w\rVert_{1}\quad\forall\; v, w \in \mathbb{R}^{2}.`$ Moreover, if this is provable, extend the proof to $`\mathbb{R}^{n}`$ and **any pair of norms**.
 
 **Proof.**<br>
-We shall use (without proof) a basic and well-known theorem about **finite-dimensional normed vector spaces**. That is, in such a space, all norms are **_equivalent_**. (Recall that two norms $`\lVert\cdot\rVert_{1}, \lVert\cdot\rVert_{2}`$ on a vector space $`V`$ are said to be **_equivalent_** if $`\exists\; a, b > 0\;`$ s.t. $`\;a\lVert u\rVert_{1} < \lVert u\rVert_{2} < b\lVert u\rVert_{1}\quad \forall\; u \in V.\,`$)
+We shall use (without proof) a basic and well-known theorem about **finite-dimensional normed vector spaces**. That is, in such a space, all norms are **_equivalent_**. (Recall that two norms $`\lVert\cdot\rVert_{1}, \lVert\cdot\rVert_{2}`$ on a vector space $`V`$ are said to be **_equivalent_** if $`\exists\; a, b > 0\;`$ s.t. $`\;a\lVert u\rVert_{1} \le \lVert u\rVert_{2} \le b\lVert u\rVert_{1}\quad \forall\; u \in V.\,`$)
 
 We show that if $`\lVert\cdot\rVert_{1}, \lVert\cdot\rVert_{2}`$ are two equivalent norms on a vector space $`V`$, then we have 
 $`\lVert v\rVert_{2} \ge \lVert w\rVert_{2} \implies \lVert v\rVert_{1} > \lVert w\rVert_{1}\quad\forall\; v, w \in V.`$ The remaining direction $`(\impliedby)`$ is **immediate** after showing this.
 
 Let $`v, w \in V.`$<br>
-Since $`\lVert\cdot\rVert_{1}, \lVert\cdot\rVert_{2}`$ are equivalent, there exist $`a, b > 0`$ s.t. $`\;a\lVert u\rVert_{1} < \lVert u\rVert_{2} < b\lVert u\rVert_{1}\quad \forall\; u \in V.\,`$<br>
-Now, Starting from $`\lVert v\rVert_{1}`$, we would like to reach the conclusion $`\lVert v\rVert_{1} > \lVert w\rVert_{1}.`$<br>
-This is quite straightforward: $`\lVert v\rVert_{1} > \frac{1}{b} \lVert v\rVert_{2} > \frac{1}{a} \lVert v\rVert_{2} > \frac{1}{a} \lVert w\rVert_{2} > \lVert w\rVert_{1}.`$
-<div align="right"><b>QED</b></div>
-<br>
+Since $`\lVert\cdot\rVert_{1}, \lVert\cdot\rVert_{2}`$ are equivalent, there exist $`a, b > 0`$ s.t. $`\;a\lVert u\rVert_{1} \le \lVert u\rVert_{2} \le b\lVert u\rVert_{1}\quad \forall\; u \in V.\,`$<br>
+Now, Starting from $`\lVert v\rVert_{1}`$, we would like to reach the conclusion $`\lVert v\rVert_{1} \ge \lVert w\rVert_{1}.`$<br>
+This is quite ~~straightforward~~: $`\lVert v\rVert_{1} \ge \frac{1}{b} \lVert v\rVert_{2} \ge \frac{1}{a} \lVert v\rVert_{2} \ge \frac{1}{a} \lVert w\rVert_{2} \ge \lVert w\rVert_{1}.`$<br>
+The preceding inequality is **false**: We don't have $`\frac{1}{b} \lVert v\rVert_{2} \ge \frac{1}{a} \lVert v\rVert_{2} `$, because $`\frac{1}{b} \le \frac{1}{a}`.$<br>
+Looking around the other side, one might find it easy to find some counterexamples to disprove this:<br>
+For example, $`u = \begin{pmatrix} 3 \\ 4\end{pmatrix}, v = \begin{pmatrix} 1 \\ 5\end{pmatrix} \implies \lVert u\rVert_{1} = 7 > 6 = \lVert v\rVert_{1} \;\text{but}\; \lVert u\rVert_{2} = 5 < \sqrt{26} = \lVert v\rVert_{2}.`$<br>
+In general, **the order in one norm does not guarantee any particular order in another**.
 
 **Rmk.** The reason why I want to prove this is that, had **Clark Chen** asked the same question in $`\mathbb{R}^{2}`$ (instead of in $`S^{2}`$), calculating Manhattan distance is **clearly faster and easier** than calculating Euclidean distance. <br>
 For example, facing with `10_000` points $`x_{0}, \ldots, x_{9999}`$ in $`\mathbb{R}^{2}`$, the order of the distances $`d(x_{0}, x_{1}), d(x_{0}, x_{2}), d(x_{0}, x_{3}), \ldots, d(x_{0}, x_{9999})`$ is **fixed** no matter which distance $`d`$ we choose to use.<br>
